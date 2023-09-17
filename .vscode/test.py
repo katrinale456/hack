@@ -1,10 +1,21 @@
 import json
 import os
 import webbrowser
+import platform
+import pathlib as path
 
 
 data = {}
 input = input("what is your mood today? default, happy, sad, or calm? \n")
+workdir = os.getcwd()
+print(workdir)
+
+ossys = list(platform.uname())
+
+if ossys[0] == 'Darwin':
+    slash = '/'
+else:
+      slash = '\\'    
 
 if input == "happy":
     
@@ -27,7 +38,7 @@ if input == "happy":
     },
     }
 
-    webbrowser.open('../happy.mp3')
+    webbrowser.open(workdir+slash+'.vscode'+slash+'happy.mp3')
 
 elif input == "sad":
 
@@ -49,7 +60,7 @@ elif input == "sad":
         "editor.foreground": "#777"
     },
     }
-        webbrowser.open('C:/Users/aahme/OneDrive/Desktop/hackmitstuffs/hack/.vscode/sad.mp3')
+        webbrowser.open(workdir+slash+'.vscode'+slash+'sad.mp3')
 
         
 elif input == "calm":
@@ -73,7 +84,7 @@ elif input == "calm":
     }
     }
     
-        webbrowser.open('C:/Users/aahme/OneDrive/Desktop/hackmitstuffs/hack/.vscode/calm.mp3')
+        webbrowser.open(workdir+slash+'.vscode'+slash+'calm.mp3')
 
 elif input == "default":  
 
@@ -90,15 +101,13 @@ elif input == "default":
             "interval": 0 
         },
         "workbench.colorCustomizations": {
-        "editor.foreground": "#000"
+        "editor.foreground": "#FFF"
     }
     }
     
 
-
-
 # Specify the file name where you want to store the JSON data
-file_name = "C:/Users/aahme/OneDrive/Desktop/hackmitstuffs/.vscode/settings.json"
+file_name = workdir+slash+'.vscode'+slash+'settings.json'
 
 # Method 1: Using json.dump() to write data to a JSON file
 with open(file_name, "w") as json_file:
