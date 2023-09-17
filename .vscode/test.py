@@ -94,7 +94,7 @@ elif input == "default":
             "editor.background": "#191b1b"
         },
         "background.fullscreen": {
-            "images": [], 
+            "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/A_black_background.jpg/640px-A_black_background.jpg"], 
             "opacity": 0.91, 
             "size": "cover", 
             "position": "center", 
