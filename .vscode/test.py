@@ -4,7 +4,7 @@ import webbrowser
 
 
 data = {}
-input = input("what is your mood today? happy, sad, or calm? \n")
+input = input("what is your mood today? default, happy, sad, or calm? \n")
 
 if input == "happy":
     
@@ -27,7 +27,7 @@ if input == "happy":
     },
     }
 
-    webbrowser.open('C:/Users/aahme/OneDrive/Desktop/hackmitstuffs/hack/.vscode/happy.mp3')
+    webbrowser.open('../happy.mp3')
 
 elif input == "sad":
 
@@ -74,6 +74,26 @@ elif input == "calm":
     }
     
         webbrowser.open('C:/Users/aahme/OneDrive/Desktop/hackmitstuffs/hack/.vscode/calm.mp3')
+
+elif input == "default":  
+
+        data = {
+        "liveServer.settings.port": 5501,
+        "workbench.colorCustomizations": {
+            "editor.background": "#191b1b"
+        },
+        "background.fullscreen": {
+            "images": [], 
+            "opacity": 0.91, 
+            "size": "cover", 
+            "position": "center", 
+            "interval": 0 
+        },
+        "workbench.colorCustomizations": {
+        "editor.foreground": "#000"
+    }
+    }
+    
 
 
 
